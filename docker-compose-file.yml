@@ -1,0 +1,22 @@
+services:
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8888:8080
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 'testdb'
+        volumes:
+            - "./data:/var/lib/mysql:rw"
+    palindrom-api:
+        image: palindrom-api:latest
+        restart: always
+        ports:
+            - 8080:8080
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/person_db?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+            - SPRING.DATASOURCE_USERNAME=root
+            - SPRING.DATASOURCE_PASSWORD=testdb
