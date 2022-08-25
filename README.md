@@ -8,7 +8,7 @@ Klargjør deploy til Docker: `docker build -t palindrom-api .`
 
 Installere container: `docker-compose -f ../docker-compose-file.yml up`
 
-Installere container inkludert frontend: `docker-compose -f ../docker-compose-file.yml up`
+Installere container inkludert frontend: `docker-compose -f ../docker-compose-with-fr-file.yml up`
 
 ### Kjøre db lokalt
 
