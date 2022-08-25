@@ -12,4 +12,4 @@ Installere container inkludert frontend: `docker-compose -f ../docker-compose-fi
 
 ### Kjøre db lokalt
 
-`docker run -d --name mysql-local -p 3306:3306 -e MYSQL_ROOT_PASSWORD=testdb -v ./db:/var/lib/mysql mysql`# palindrom-api
+`docker run -d --name mysql-local -p 3306:3306 -e MYSQL_ROOT_PASSWORD=testdb -v ./db:/var/lib/mysql mysql`
